@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2548a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drag View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DragViewController" customModule="DragButtons" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAj-cb-X4I" customClass="DragReceiverView" customModule="DragButtons" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.45676755905151367" green="0.9098249077796936" blue="0.73001044988632202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-id-5UM" customClass="DragReceiverView" customModule="DragButtons" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.8426550030708313" green="0.83693724870681763" blue="0.95688003301620483" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-iz-dOO" customClass="DraggableCircleView" customModule="DragButtons" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.0098673757165670395" green="0.76918649673461914" blue="0.9900403618812561" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JeQ-Bc-ecW"/>
+                                    <constraint firstAttribute="height" constant="100" id="NbK-TC-6rf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kAj-cb-X4I" firstAttribute="top" secondItem="JWg-iz-dOO" secondAttribute="bottom" constant="100" id="6p3-qv-d3Y"/>
+                            <constraint firstItem="sIz-id-5UM" firstAttribute="width" secondItem="kAj-cb-X4I" secondAttribute="width" id="BuC-62-YTY"/>
+                            <constraint firstItem="kAj-cb-X4I" firstAttribute="height" secondItem="JWg-iz-dOO" secondAttribute="height" multiplier="1.05" id="Daj-gU-TrE"/>
+                            <constraint firstItem="kAj-cb-X4I" firstAttribute="width" secondItem="JWg-iz-dOO" secondAttribute="width" multiplier="1.05" id="Uy4-8K-Rli"/>
+                            <constraint firstItem="sIz-id-5UM" firstAttribute="top" secondItem="kAj-cb-X4I" secondAttribute="top" id="Wal-V8-HbR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sIz-id-5UM" secondAttribute="trailing" constant="30" id="cAe-oa-J4M"/>
+                            <constraint firstItem="JWg-iz-dOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d19-51-f6l"/>
+                            <constraint firstItem="kAj-cb-X4I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="jtT-Fi-JgA"/>
+                            <constraint firstItem="sIz-id-5UM" firstAttribute="height" secondItem="kAj-cb-X4I" secondAttribute="height" id="na9-fx-7hh"/>
+                            <constraint firstItem="JWg-iz-dOO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="vRb-pA-zFH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="draggingCircleView" destination="JWg-iz-dOO" id="Rdg-TP-tcN"/>
+                        <outlet property="leftReceiverView" destination="kAj-cb-X4I" id="FkW-nM-fVS"/>
+                        <outlet property="rightReceiverView" destination="sIz-id-5UM" id="gjV-e9-dpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

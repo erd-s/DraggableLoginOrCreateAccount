@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9B3E75201DBA97E200C148EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E751F1DBA97E200C148EE /* AppDelegate.swift */; };
-		9B3E75221DBA97E200C148EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75211DBA97E200C148EE /* ViewController.swift */; };
-		9B3E75251DBA97E200C148EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75231DBA97E200C148EE /* Main.storyboard */; };
+		9B3E75251DBA97E200C148EE /* DragView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75231DBA97E200C148EE /* DragView.storyboard */; };
 		9B3E75271DBA97E200C148EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75261DBA97E200C148EE /* Assets.xcassets */; };
 		9B3E752A1DBA97E200C148EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75281DBA97E200C148EE /* LaunchScreen.storyboard */; };
+		9B3E75321DBA98B000C148EE /* DraggableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75311DBA98B000C148EE /* DraggableCircleView.swift */; };
+		9B3E75351DBA98C800C148EE /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75341DBA98C800C148EE /* DragViewController.swift */; };
+		9B3E75391DBA992800C148EE /* DragReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75381DBA992800C148EE /* DragReceiverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B3E751C1DBA97E200C148EE /* DragButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3E751F1DBA97E200C148EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B3E75211DBA97E200C148EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9B3E75241DBA97E200C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B3E75241DBA97E200C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DragView.storyboard; sourceTree = "<group>"; };
 		9B3E75261DBA97E200C148EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B3E75291DBA97E200C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B3E752B1DBA97E200C148EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B3E75311DBA98B000C148EE /* DraggableCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCircleView.swift; sourceTree = "<group>"; };
+		9B3E75341DBA98C800C148EE /* DragViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragViewController.swift; path = ../DragViewController.swift; sourceTree = "<group>"; };
+		9B3E75381DBA992800C148EE /* DragReceiverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragReceiverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		9B3E751E1DBA97E200C148EE /* DragButtons */ = {
 			isa = PBXGroup;
 			children = (
-				9B3E751F1DBA97E200C148EE /* AppDelegate.swift */,
-				9B3E75211DBA97E200C148EE /* ViewController.swift */,
-				9B3E75231DBA97E200C148EE /* Main.storyboard */,
-				9B3E75261DBA97E200C148EE /* Assets.xcassets */,
-				9B3E75281DBA97E200C148EE /* LaunchScreen.storyboard */,
-				9B3E752B1DBA97E200C148EE /* Info.plist */,
+				9B3E75361DBA98D300C148EE /* DragViewController */,
+				9B3E75331DBA98B500C148EE /* Model */,
+				9B3E75371DBA990700C148EE /* Support Files */,
 			);
 			path = DragButtons;
+			sourceTree = "<group>";
+		};
+		9B3E75331DBA98B500C148EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B3E75381DBA992800C148EE /* DragReceiverView.swift */,
+				9B3E75311DBA98B000C148EE /* DraggableCircleView.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B3E75361DBA98D300C148EE /* DragViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B3E75341DBA98C800C148EE /* DragViewController.swift */,
+				9B3E75231DBA97E200C148EE /* DragView.storyboard */,
+			);
+			name = DragViewController;
+			sourceTree = "<group>";
+		};
+		9B3E75371DBA990700C148EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B3E751F1DBA97E200C148EE /* AppDelegate.swift */,
+				9B3E75281DBA97E200C148EE /* LaunchScreen.storyboard */,
+				9B3E752B1DBA97E200C148EE /* Info.plist */,
+				9B3E75261DBA97E200C148EE /* Assets.xcassets */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +156,7 @@
 			files = (
 				9B3E752A1DBA97E200C148EE /* LaunchScreen.storyboard in Resources */,
 				9B3E75271DBA97E200C148EE /* Assets.xcassets in Resources */,
-				9B3E75251DBA97E200C148EE /* Main.storyboard in Resources */,
+				9B3E75251DBA97E200C148EE /* DragView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,20 +167,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B3E75221DBA97E200C148EE /* ViewController.swift in Sources */,
 				9B3E75201DBA97E200C148EE /* AppDelegate.swift in Sources */,
+				9B3E75351DBA98C800C148EE /* DragViewController.swift in Sources */,
+				9B3E75321DBA98B000C148EE /* DraggableCircleView.swift in Sources */,
+				9B3E75391DBA992800C148EE /* DragReceiverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9B3E75231DBA97E200C148EE /* Main.storyboard */ = {
+		9B3E75231DBA97E200C148EE /* DragView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9B3E75241DBA97E200C148EE /* Base */,
 			);
-			name = Main.storyboard;
+			name = DragView.storyboard;
 			sourceTree = "<group>";
 		};
 		9B3E75281DBA97E200C148EE /* LaunchScreen.storyboard */ = {
@@ -300,6 +332,7 @@
 				9B3E75301DBA97E200C148EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
